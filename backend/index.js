@@ -24,9 +24,11 @@ app.use((req, res, next) => {
 app.use(usersRoute);
 app.use(foodRoute);
 
-app.use((req, res, next) => {
-  const error = new HttpError("Couldn't find this route.", 404);
-  next(error);
+app.use((err, req, res, next) => {
+  if (err) {
+    const error = new HttpError("Couldn't find this route.", 404);
+    next(error);
+  }
 });
 
 app.use((err, req, res, next) => {
