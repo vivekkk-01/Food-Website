@@ -59,7 +59,7 @@ const Home = () => {
 export default Home;
 
 export const loader = async () => {
-  const response = await fetch("http://localhost:4000/food-data");
+  const response = await fetch("https://gofood-backend-8dqe.onrender.com/food-data");
   if (!response.ok) {
     console.log(response);
   } else {

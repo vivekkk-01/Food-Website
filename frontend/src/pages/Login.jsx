@@ -53,7 +53,7 @@ export const action = async ({ request }) => {
     email: data.get("email"),
     password: data.get("password"),
   };
-  const response = await fetch("http://localhost:4000/login", {
+  const response = await fetch("https://gofood-backend-8dqe.onrender.com/login", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",

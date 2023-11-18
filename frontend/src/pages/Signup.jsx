@@ -71,7 +71,7 @@ export const action = async ({ request }) => {
     password: data.get("password"),
     location: data.get("location"),
   };
-  const response = await fetch("http://localhost:4000/create-user", {
+  const response = await fetch("https://gofood-backend-8dqe.onrender.com/create-user", {
     method: "POST",
     headers: {
       "Content-Type": "application/json",
